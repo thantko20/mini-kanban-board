@@ -13,7 +13,7 @@ function App() {
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
         <h1 className="font-bold text-xl">Mini Kanban</h1>
         <Button
-          className="bg-blue-500 text-white px-2 py-1 rounded min-w-[100px]"
+          className="cursor-pointer bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded min-w-[100px]"
           onClick={() => setIsOpen(true)}
         >
           Add

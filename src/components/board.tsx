@@ -38,7 +38,7 @@ export function Board() {
     useSensor(TouchSensor),
     useSensor(PointerSensor, {
       activationConstraint: {
-        distance: 1,
+        distance: 0.01,
       },
     })
   );

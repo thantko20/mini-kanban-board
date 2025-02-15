@@ -28,13 +28,6 @@ export function Column({ tasks, title }: { tasks: TTask[]; title: string }) {
           <Task key={task.id} task={task} />
         ))}
       </SortableContext>
-      {/* <button
-        aria-label="add a new task"
-        className="flex items-center justify-center gap-2 rounded py-2 px-1 text-gray-600 font-semibold hover:bg-slate-200 mt-auto"
-        title="Add a new task"
-      >
-        <PlusIcon size={18} />
-      </button> */}
     </div>
   );
 }

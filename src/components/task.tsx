@@ -1,7 +1,7 @@
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import type { Task as TTask } from "../types";
-import { PencilIcon, TrashIcon } from "lucide-react";
+import { GripVertical, PencilIcon, TrashIcon } from "lucide-react";
 import { useTaskStore } from "../stores/tasks.store";
 import { useState } from "react";
 import { TaskFormModal } from "./task-form-modal";
@@ -26,7 +26,7 @@ export function Task({ task }: { task: TTask }) {
   });
   const style = {
     transition,
-    transform: CSS.Transform.toString(transform),
+    transform: CSS.Translate.toString(transform),
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -55,9 +55,9 @@ export function Task({ task }: { task: TTask }) {
       ref={setNodeRef}
       style={style}
       {...attributes}
-      {...listeners}
+      // {...listeners}
       data-isdragging={isDragging}
-      className="bg-white p-2 rounded shadow-sm data-[isdragging=true]:shadow-lg data-[isdragging=true]:cursor-grab"
+      className="group bg-white p-2 rounded shadow-sm data-[isdragging=true]:shadow-lg touch-none"
     >
       <TaskFormModal
         isOpen={isModalOpen}
@@ -65,7 +65,18 @@ export function Task({ task }: { task: TTask }) {
         task={task}
       />
       <div className="flex items-center gap-2 justify-between">
-        <div className="font-semibold text-lg">{task.title}</div>
+        <div className="flex items-center gap-1">
+          <button
+            {...attributes}
+            {...listeners}
+            className="text-gray-400 group-data-[isdragging=true]:text-gray-700 group-data-[isdragging=false]:cursor-grab"
+          >
+            <GripVertical size={18} />
+          </button>
+          <div className="font-semibold text-lg truncate md:max-w-[150px]">
+            {task.title}
+          </div>
+        </div>
         <div className="flex items-center gap-1">
           <button
             aria-label="edit task"
