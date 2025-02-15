@@ -68,7 +68,7 @@ export function Task({ task }: { task: TTask }) {
           <button
             {...attributes}
             {...listeners}
-            className="text-gray-400 group-data-[isdragging=true]:text-gray-700 group-data-[isdragging=false]:cursor-grab"
+            className="text-gray-400 group-data-[isdragging=true]:text-gray-700 cursor-grab group-data-[isdragging=true]:cursor-grabbing"
           >
             <GripVertical size={18} />
           </button>
