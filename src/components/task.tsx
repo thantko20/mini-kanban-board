@@ -55,7 +55,6 @@ export function Task({ task }: { task: TTask }) {
       ref={setNodeRef}
       style={style}
       {...attributes}
-      // {...listeners}
       data-isdragging={isDragging}
       className="group bg-white p-2 rounded shadow-sm data-[isdragging=true]:shadow-lg touch-none"
     >
@@ -73,7 +72,10 @@ export function Task({ task }: { task: TTask }) {
           >
             <GripVertical size={18} />
           </button>
-          <div className="font-semibold text-lg truncate md:max-w-[150px]">
+          <div
+            className="font-semibold text-lg truncate md:max-w-[150px]"
+            title={task.title}
+          >
             {task.title}
           </div>
         </div>

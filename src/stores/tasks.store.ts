@@ -29,19 +29,19 @@ const initialTasks: Task[] = [
     id: nanoid(),
     title: "Task 1",
     description: "This is the first task",
-    category: "Todo",
+    category: "To Do",
   },
   {
     id: nanoid(),
     title: "Task 2",
     description: "This is the second task",
-    category: "Todo",
+    category: "To Do",
   },
   {
     id: nanoid(),
     title: "Task 3",
     description: "This is the third task",
-    category: "Todo",
+    category: "To Do",
   },
 ];
 

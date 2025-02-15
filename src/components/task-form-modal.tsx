@@ -45,7 +45,7 @@ export const TaskFormModal = ({ isOpen, close, task }: Props) => {
                 id: nanoid(),
                 title,
                 description,
-                category: "Todo",
+                category: "To Do",
                 dueDate,
               });
               e.currentTarget.reset();

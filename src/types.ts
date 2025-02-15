@@ -1,4 +1,4 @@
-export const categories = ["Todo", "In Progress", "Done"] as const;
+export const categories = ["To Do", "In Progress", "Done"] as const;
 
 export type Category = (typeof categories)[number];
 
